@@ -42,6 +42,9 @@ class DetailsVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     func getData() {
         if chosenImage != "" {
             imageView.isUserInteractionEnabled = false
+            nameText.isEnabled = false
+            artistText.isEnabled = false
+            yearText.isEnabled = false
             saveButton.isHidden = true
             let appDelegate = UIApplication.shared.delegate as! AppDelegate
             let context = appDelegate.persistentContainer.viewContext

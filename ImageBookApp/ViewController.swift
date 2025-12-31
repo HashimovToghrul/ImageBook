@@ -58,8 +58,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     if let id = result.value(forKey: "id") as? UUID {
                         idArray.append(id)
                     }
-                    self.tableView.reloadData()
+                   
                 }
+                self.tableView.reloadData()
             }
         } catch {
             print("error")
